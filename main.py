@@ -10,7 +10,7 @@ os.environ['DATABASE_URL'] = "postgresql://postgres:TEyDcvdPSGfuMWcfMocSETeTblbP
 
 app = Flask(__name__)
 
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 
